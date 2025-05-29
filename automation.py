@@ -3,8 +3,8 @@ import pywhatkit as kit
 import time
 
 # Settings
-WAIT = 5  # seconds to wait before sending each message
-DELAY_BETWEEN_MESSAGES = 6  # seconds to pause between each message
+WAIT = 6  # seconds to wait before sending each message
+DELAY_BETWEEN_MESSAGES = 7  # seconds to pause between each message
 
 # Load CSV
 df = pd.read_csv("places.csv")
@@ -44,7 +44,7 @@ for idx, row in df.iterrows():
             message=message,
             wait_time=WAIT,
             tab_close=True,
-            close_time=4
+            close_time=5
         )
         print("✅ Message sent.")
     except Exception as err:
